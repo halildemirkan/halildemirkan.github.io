@@ -1,0 +1,124 @@
+/* Custom styles */
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #374151;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.timeline-content {
+    position: relative;
+    width: calc(50% - 30px);
+    padding: 20px;
+    background: #1f2937;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    color: #f3f4f6;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #1e40af;
+}
+
+/* Code editor styles */
+#code-editor {
+    font-family: 'Fira Code', monospace;
+}
+
+#code-editor pre {
+    margin: 0;
+    padding: 1rem;
+    background-color: #111827;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+#code-editor code {
+    color: #e5e7eb;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.output {
+    font-family: 'Fira Code', monospace;
+    color: #e5e7eb;
+    background-color: #111827;
+}
+
+
+/* Mobile menu transition */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Skill tabs */
+.skill-tab {
+    transition: all 0.3s ease;
+}
+
+.skill-tab:hover {
+    transform: translateY(-2px);
+}
+
+/* Card hover effects */
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+} 
